@@ -59,7 +59,8 @@ export default function Dashboard() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="flex-1 bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-sm border border-white p-2 md:p-6 relative overflow-hidden flex flex-col justify-center min-h-[300px]"
+
+                            className="flex-1 bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-sm border border-white px-4 pt-6 pb-12 md:p-6 relative overflow-hidden flex flex-col justify-center min-h-[350px]"
                         >
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-emerald-500 opacity-60" />
                             <EnergyFlow
