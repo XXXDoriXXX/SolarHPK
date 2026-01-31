@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+}
+
+/* --- ВИПРАВЛЕНІ АНІМАЦІЇ --- */
+
+/* Горизонтальний рух: від left: 0% до left: 100% */
+@keyframes flow-particle {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5); /* Зберігаємо центрування по вертикалі */
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    left: 100%; /* Рухаємось до кінця контейнера */
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5);
+  }
+}
+
+/* Вертикальний рух: від top: 0% до top: 100% */
+@keyframes flow-particle-vertical {
+  0% {
+    top: 0%;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5); /* Зберігаємо центрування по горизонталі */
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    top: 100%; /* Рухаємось до низу контейнера */
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+}
+
+.animate-flow-particle {
+  animation: flow-particle 2s linear infinite;
+}
+
+.animate-flow-particle-vertical {
+  animation: flow-particle-vertical 2s linear infinite;
+}
+
+/* Фон (Blobs) */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
